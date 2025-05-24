@@ -3,12 +3,12 @@ import { Button } from "@/components/ui/button";
 
 const categories = [
   "All",
-  "Basketball",
+  "Cricket",
   "Soccer",
+  "Hockey", 
   "Tennis",
-  "Running",
-  "Fitness",
-  "Swimming"
+  "Table Tennis",
+  "Basketball"
 ];
 
 interface CategoryFilterProps {
