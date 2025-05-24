@@ -23,6 +23,10 @@ const ProductCard = ({ product }: ProductCardProps) => {
     ? Math.round(((product.originalPrice - product.price) / product.originalPrice) * 100)
     : 0;
 
+  const formatPrice = (price: number) => {
+    return `₹${price.toLocaleString('en-IN')}`;
+  };
+
   return (
     <Card className="group cursor-pointer transition-all duration-300 hover:shadow-xl hover:-translate-y-2 border-0 shadow-md">
       <div className="relative overflow-hidden rounded-t-lg">
@@ -69,11 +73,11 @@ const ProductCard = ({ product }: ProductCardProps) => {
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-2">
             <span className="text-2xl font-bold text-gray-900">
-              ${product.price}
+              {formatPrice(product.price)}
             </span>
             {product.originalPrice && (
               <span className="text-lg text-gray-500 line-through">
-                ${product.originalPrice}
+                {formatPrice(product.originalPrice)}
               </span>
             )}
           </div>
