@@ -2,6 +2,8 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Heart, ShoppingCart } from "lucide-react";
+import { useCart } from "@/hooks/useCart";
+import { useAuth } from "@/hooks/useAuth";
 
 export interface Product {
   id: number;
@@ -19,12 +21,19 @@ interface ProductCardProps {
 }
 
 const ProductCard = ({ product }: ProductCardProps) => {
+  const { user } = useAuth();
+  const { addToCart } = useCart(user?.id);
+  
   const discountPercentage = product.originalPrice 
     ? Math.round(((product.originalPrice - product.price) / product.originalPrice) * 100)
     : 0;
 
   const formatPrice = (price: number) => {
     return `₹${price.toLocaleString('en-IN')}`;
+  };
+
+  const handleAddToCart = () => {
+    addToCart(product.id, 1);
   };
 
   return (
@@ -86,6 +95,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
             size="sm" 
             className="bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-600 hover:to-red-700"
             disabled={!product.inStock}
+            onClick={handleAddToCart}
           >
             <ShoppingCart className="h-4 w-4 mr-2" />
             Add to Cart
