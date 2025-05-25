@@ -51,6 +51,9 @@ const ProductCard = ({ product }: ProductCardProps) => {
             <span className="text-white font-semibold">Out of Stock</span>
           </div>
         )}
+        <div className="absolute bottom-4 right-4 bg-green-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
+          {product.quantity} in stock
+        </div>
       </div>
       
       <CardContent className="p-6">
@@ -84,7 +87,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
           <Button 
             size="sm" 
             className="bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-600 hover:to-red-700"
-            disabled={!product.inStock}
+            disabled={!product.inStock || product.quantity === 0}
             onClick={handleAddToCart}
           >
             <ShoppingCart className="h-4 w-4 mr-2" />

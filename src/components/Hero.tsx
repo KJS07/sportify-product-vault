@@ -2,6 +2,20 @@
 import { Button } from "@/components/ui/button";
 
 const Hero = () => {
+  const scrollToProducts = () => {
+    const productsSection = document.querySelector('#products-section');
+    if (productsSection) {
+      productsSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const scrollToCategories = () => {
+    const categoriesSection = document.querySelector('#categories-section');
+    if (categoriesSection) {
+      categoriesSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section className="relative bg-gradient-to-br from-orange-500 via-red-500 to-pink-600 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
@@ -14,10 +28,19 @@ const Hero = () => {
             Discover premium sports equipment for every athlete
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-white text-orange-600 hover:bg-gray-100 font-semibold">
+            <Button 
+              size="lg" 
+              className="bg-white text-orange-600 hover:bg-gray-100 font-semibold"
+              onClick={scrollToProducts}
+            >
               Shop Now
             </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-orange-600">
+            <Button 
+              size="lg" 
+              variant="outline" 
+              className="border-white text-white hover:bg-white hover:text-orange-600"
+              onClick={scrollToCategories}
+            >
               View Categories
             </Button>
           </div>
