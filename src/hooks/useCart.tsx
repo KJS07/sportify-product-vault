@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react';
 import { supabase } from '@/integrations/supabase/client';
 import { useToast } from '@/hooks/use-toast';
-import type { Product } from '@/components/ProductCard';
+import type { Product } from '@/data/products';
 
 interface CartItem {
   id: string;
