@@ -5,17 +5,15 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Minus, Plus, ShoppingCart, Trash2 } from 'lucide-react';
 import { useCart } from '@/hooks/useCart';
 import { products } from '@/data/products';
-import { supabase } from '@/integrations/supabase/client';
-import { useToast } from '@/hooks/use-toast';
+import PaymentMethod from './PaymentMethod';
 
 interface CartProps {
   userId: string;
 }
 
 const Cart = ({ userId }: CartProps) => {
-  const { cartItems, updateQuantity, removeFromCart } = useCart(userId);
-  const [isCheckingOut, setIsCheckingOut] = useState(false);
-  const { toast } = useToast();
+  const { cartItems, updateQuantity, removeFromCart, clearCart } = useCart(userId);
+  const [showPayment, setShowPayment] = useState(false);
 
   const getCartItemsWithProducts = () => {
     return cartItems.map(item => {
@@ -31,38 +29,20 @@ const Cart = ({ userId }: CartProps) => {
     0
   );
 
-  const handleCheckout = async () => {
-    if (cartItemsWithProducts.length === 0) return;
-
-    setIsCheckingOut(true);
-    try {
-      const { data, error } = await supabase.functions.invoke('create-payment', {
-        body: {
-          items: cartItemsWithProducts.map(item => ({
-            product_id: item.product_id,
-            name: item.product!.name,
-            price: item.product!.price,
-            quantity: item.quantity,
-          })),
-          total_amount: Math.round(totalAmount * 100), // Convert to paise
-        },
-      });
-
-      if (error) throw error;
-
-      if (data?.url) {
-        window.open(data.url, '_blank');
-      }
-    } catch (error: any) {
-      toast({
-        title: "Checkout Error",
-        description: error.message || "Failed to initiate checkout",
-        variant: "destructive",
-      });
-    } finally {
-      setIsCheckingOut(false);
-    }
+  const handlePaymentSuccess = () => {
+    clearCart();
+    setShowPayment(false);
   };
+
+  if (showPayment) {
+    return (
+      <PaymentMethod
+        totalAmount={totalAmount}
+        onPaymentSuccess={handlePaymentSuccess}
+        onBack={() => setShowPayment(false)}
+      />
+    );
+  }
 
   if (cartItemsWithProducts.length === 0) {
     return (
@@ -137,12 +117,11 @@ const Cart = ({ userId }: CartProps) => {
             </span>
           </div>
           <Button 
-            onClick={handleCheckout} 
+            onClick={() => setShowPayment(true)} 
             className="w-full" 
             size="lg"
-            disabled={isCheckingOut}
           >
-            {isCheckingOut ? 'Processing...' : 'Proceed to Checkout'}
+            Proceed to Checkout
           </Button>
         </div>
       </CardContent>
