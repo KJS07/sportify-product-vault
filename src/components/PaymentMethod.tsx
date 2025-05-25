@@ -178,15 +178,18 @@ const PaymentMethod = ({ totalAmount, onPaymentSuccess, onBack }: PaymentMethodP
           <div className="space-y-4 p-4 border rounded-lg text-center">
             <h3 className="font-semibold">QR Code Payment</h3>
             <div className="flex justify-center">
-              <div className="w-48 h-48 bg-gray-100 border-2 border-dashed border-gray-300 rounded-lg flex items-center justify-center">
-                <div className="text-center">
-                  <QrCode className="h-16 w-16 mx-auto mb-2 text-gray-400" />
-                  <p className="text-sm text-gray-500">QR Code</p>
-                  <p className="text-xs text-gray-400">Scan to pay ₹{totalAmount}</p>
-                </div>
+              <div className="w-48 h-48 border-2 border-gray-300 rounded-lg overflow-hidden">
+                <img 
+                  src="/lovable-uploads/341cb4d4-a069-4053-a40d-0c57ba2970da.png" 
+                  alt="QR Code for Payment" 
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
             <div className="space-y-2">
+              <p className="text-sm text-gray-600 font-medium">
+                Amount to Pay: ₹{totalAmount.toLocaleString('en-IN')}
+              </p>
               <p className="text-sm text-gray-600">
                 1. Open your payment app (PhonePe, Paytm, GPay, etc.)
               </p>

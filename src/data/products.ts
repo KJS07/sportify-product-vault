@@ -22,7 +22,7 @@ export const products: Product[] = [
     category: "Cricket",
     rating: 4.8,
     inStock: true,
-    quantity: 15
+    quantity: 3
   },
   {
     id: 2,
@@ -32,7 +32,7 @@ export const products: Product[] = [
     category: "Cricket",
     rating: 4.6,
     inStock: true,
-    quantity: 42
+    quantity: 27
   },
   {
     id: 3,
@@ -42,7 +42,7 @@ export const products: Product[] = [
     category: "Cricket",
     rating: 4.5,
     inStock: true,
-    quantity: 23
+    quantity: 8
   },
   {
     id: 4,
@@ -52,7 +52,7 @@ export const products: Product[] = [
     category: "Cricket",
     rating: 4.7,
     inStock: true,
-    quantity: 31
+    quantity: 15
   },
   {
     id: 5,
@@ -63,7 +63,7 @@ export const products: Product[] = [
     category: "Cricket",
     rating: 4.8,
     inStock: true,
-    quantity: 18
+    quantity: 4
   },
   {
     id: 6,
@@ -73,7 +73,7 @@ export const products: Product[] = [
     category: "Cricket",
     rating: 4.6,
     inStock: true,
-    quantity: 26
+    quantity: 12
   },
   {
     id: 7,
@@ -83,7 +83,7 @@ export const products: Product[] = [
     category: "Cricket",
     rating: 4.4,
     inStock: true,
-    quantity: 12
+    quantity: 6
   },
   {
     id: 8,
@@ -93,7 +93,7 @@ export const products: Product[] = [
     category: "Cricket",
     rating: 4.3,
     inStock: true,
-    quantity: 35
+    quantity: 22
   },
 
   // Football (Soccer) Equipment
@@ -105,7 +105,7 @@ export const products: Product[] = [
     category: "Soccer",
     rating: 4.8,
     inStock: true,
-    quantity: 28
+    quantity: 14
   },
   {
     id: 10,
@@ -116,7 +116,7 @@ export const products: Product[] = [
     category: "Soccer",
     rating: 4.7,
     inStock: true,
-    quantity: 19
+    quantity: 2
   },
   {
     id: 11,
@@ -126,7 +126,7 @@ export const products: Product[] = [
     category: "Soccer",
     rating: 4.5,
     inStock: true,
-    quantity: 37
+    quantity: 19
   },
   {
     id: 12,
@@ -136,7 +136,7 @@ export const products: Product[] = [
     category: "Soccer",
     rating: 4.6,
     inStock: true,
-    quantity: 22
+    quantity: 7
   },
   {
     id: 13,
@@ -147,7 +147,7 @@ export const products: Product[] = [
     category: "Soccer",
     rating: 4.7,
     inStock: true,
-    quantity: 8
+    quantity: 1
   },
   {
     id: 14,
@@ -157,7 +157,7 @@ export const products: Product[] = [
     category: "Soccer",
     rating: 4.4,
     inStock: true,
-    quantity: 45
+    quantity: 31
   },
   {
     id: 15,
@@ -167,7 +167,7 @@ export const products: Product[] = [
     category: "Soccer",
     rating: 4.3,
     inStock: true,
-    quantity: 33
+    quantity: 18
   },
   {
     id: 16,
@@ -178,7 +178,7 @@ export const products: Product[] = [
     category: "Soccer",
     rating: 4.6,
     inStock: true,
-    quantity: 29
+    quantity: 16
   },
 
   // Hockey Equipment
@@ -190,7 +190,7 @@ export const products: Product[] = [
     category: "Hockey",
     rating: 4.7,
     inStock: true,
-    quantity: 16
+    quantity: 5
   },
   {
     id: 18,
@@ -200,7 +200,7 @@ export const products: Product[] = [
     category: "Hockey",
     rating: 4.5,
     inStock: true,
-    quantity: 52
+    quantity: 34
   },
   {
     id: 19,
@@ -210,7 +210,7 @@ export const products: Product[] = [
     category: "Hockey",
     rating: 4.6,
     inStock: true,
-    quantity: 24
+    quantity: 11
   },
   {
     id: 20,
@@ -220,7 +220,7 @@ export const products: Product[] = [
     category: "Hockey",
     rating: 4.4,
     inStock: true,
-    quantity: 67
+    quantity: 43
   },
   {
     id: 21,
@@ -231,7 +231,7 @@ export const products: Product[] = [
     category: "Hockey",
     rating: 4.8,
     inStock: true,
-    quantity: 5
+    quantity: 1
   },
   {
     id: 22,
@@ -241,7 +241,7 @@ export const products: Product[] = [
     category: "Hockey",
     rating: 4.5,
     inStock: true,
-    quantity: 21
+    quantity: 9
   },
   {
     id: 23,
@@ -251,7 +251,7 @@ export const products: Product[] = [
     category: "Hockey",
     rating: 4.3,
     inStock: true,
-    quantity: 39
+    quantity: 26
   },
   {
     id: 24,
@@ -261,7 +261,7 @@ export const products: Product[] = [
     category: "Hockey",
     rating: 4.2,
     inStock: true,
-    quantity: 41
+    quantity: 23
   },
 
   // Tennis Equipment
@@ -274,7 +274,7 @@ export const products: Product[] = [
     category: "Tennis",
     rating: 4.8,
     inStock: true,
-    quantity: 14
+    quantity: 3
   },
   {
     id: 26,
@@ -284,7 +284,7 @@ export const products: Product[] = [
     category: "Tennis",
     rating: 4.6,
     inStock: true,
-    quantity: 58
+    quantity: 37
   },
   {
     id: 27,
@@ -294,7 +294,7 @@ export const products: Product[] = [
     category: "Tennis",
     rating: 4.7,
     inStock: true,
-    quantity: 17
+    quantity: 6
   },
   {
     id: 28,
@@ -304,7 +304,7 @@ export const products: Product[] = [
     category: "Tennis",
     rating: 4.4,
     inStock: true,
-    quantity: 43
+    quantity: 29
   },
   {
     id: 29,
@@ -314,7 +314,7 @@ export const products: Product[] = [
     category: "Tennis",
     rating: 4.5,
     inStock: true,
-    quantity: 11
+    quantity: 4
   },
   {
     id: 30,
@@ -324,7 +324,7 @@ export const products: Product[] = [
     category: "Tennis",
     rating: 4.3,
     inStock: true,
-    quantity: 27
+    quantity: 13
   },
   {
     id: 31,
@@ -334,7 +334,7 @@ export const products: Product[] = [
     category: "Tennis",
     rating: 4.2,
     inStock: true,
-    quantity: 64
+    quantity: 41
   },
   {
     id: 32,
@@ -344,7 +344,7 @@ export const products: Product[] = [
     category: "Tennis",
     rating: 4.4,
     inStock: true,
-    quantity: 36
+    quantity: 20
   },
 
   // Table Tennis Equipment
@@ -357,7 +357,7 @@ export const products: Product[] = [
     category: "Table Tennis",
     rating: 4.8,
     inStock: true,
-    quantity: 6
+    quantity: 1
   },
   {
     id: 34,
@@ -367,7 +367,7 @@ export const products: Product[] = [
     category: "Table Tennis",
     rating: 4.6,
     inStock: true,
-    quantity: 32
+    quantity: 15
   },
   {
     id: 35,
@@ -377,7 +377,7 @@ export const products: Product[] = [
     category: "Table Tennis",
     rating: 4.5,
     inStock: true,
-    quantity: 78
+    quantity: 47
   },
   {
     id: 36,
@@ -387,7 +387,7 @@ export const products: Product[] = [
     category: "Table Tennis",
     rating: 4.4,
     inStock: true,
-    quantity: 25
+    quantity: 12
   },
   {
     id: 37,
@@ -397,7 +397,7 @@ export const products: Product[] = [
     category: "Table Tennis",
     rating: 4.3,
     inStock: true,
-    quantity: 18
+    quantity: 8
   },
   {
     id: 38,
@@ -407,7 +407,7 @@ export const products: Product[] = [
     category: "Table Tennis",
     rating: 4.2,
     inStock: true,
-    quantity: 13
+    quantity: 7
   },
   {
     id: 39,
@@ -417,7 +417,7 @@ export const products: Product[] = [
     category: "Table Tennis",
     rating: 4.1,
     inStock: true,
-    quantity: 91
+    quantity: 49
   },
   {
     id: 40,
@@ -427,7 +427,7 @@ export const products: Product[] = [
     category: "Table Tennis",
     rating: 4.3,
     inStock: true,
-    quantity: 47
+    quantity: 28
   },
 
   // Basketball Equipment
@@ -439,7 +439,7 @@ export const products: Product[] = [
     category: "Basketball",
     rating: 4.7,
     inStock: true,
-    quantity: 34
+    quantity: 17
   },
   {
     id: 42,
@@ -450,7 +450,7 @@ export const products: Product[] = [
     category: "Basketball",
     rating: 4.8,
     inStock: true,
-    quantity: 9
+    quantity: 2
   },
   {
     id: 43,
@@ -460,7 +460,7 @@ export const products: Product[] = [
     category: "Basketball",
     rating: 4.6,
     inStock: true,
-    quantity: 7
+    quantity: 3
   },
   {
     id: 44,
@@ -471,7 +471,7 @@ export const products: Product[] = [
     category: "Basketball",
     rating: 4.8,
     inStock: true,
-    quantity: 20
+    quantity: 4
   },
   {
     id: 45,
@@ -481,7 +481,7 @@ export const products: Product[] = [
     category: "Basketball",
     rating: 4.5,
     inStock: true,
-    quantity: 38
+    quantity: 21
   },
   {
     id: 46,
@@ -491,7 +491,7 @@ export const products: Product[] = [
     category: "Basketball",
     rating: 4.4,
     inStock: true,
-    quantity: 55
+    quantity: 33
   },
   {
     id: 47,
@@ -501,7 +501,7 @@ export const products: Product[] = [
     category: "Basketball",
     rating: 4.6,
     inStock: true,
-    quantity: 42
+    quantity: 24
   },
   {
     id: 48,
@@ -511,6 +511,6 @@ export const products: Product[] = [
     category: "Basketball",
     rating: 4.3,
     inStock: true,
-    quantity: 73
+    quantity: 45
   }
 ];
