@@ -1,6 +1,6 @@
 
 import { useState } from "react";
-import { Search, ShoppingCart, User, LogOut } from "lucide-react";
+import { Search, ShoppingCart, User, LogOut, Settings } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useAuth } from "@/hooks/useAuth";
@@ -14,6 +14,13 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 const Header = () => {
   const { user, signOut } = useAuth();
@@ -75,13 +82,25 @@ const Header = () => {
                   </DialogContent>
                 </Dialog>
 
-                <div className="flex items-center space-x-2">
-                  <User className="h-4 w-4" />
-                  <span className="text-sm">{user.email}</span>
-                  <Button variant="ghost" size="sm" onClick={signOut}>
-                    <LogOut className="h-4 w-4" />
-                  </Button>
-                </div>
+                <DropdownMenu>
+                  <DropdownMenuTrigger asChild>
+                    <Button variant="ghost" size="sm" className="flex items-center space-x-2">
+                      <User className="h-4 w-4" />
+                      <span className="text-sm hidden md:block">{user.email}</span>
+                    </Button>
+                  </DropdownMenuTrigger>
+                  <DropdownMenuContent align="end" className="w-48">
+                    <DropdownMenuItem onClick={() => window.location.href = '/profile'}>
+                      <Settings className="h-4 w-4 mr-2" />
+                      Profile Settings
+                    </DropdownMenuItem>
+                    <DropdownMenuSeparator />
+                    <DropdownMenuItem onClick={signOut}>
+                      <LogOut className="h-4 w-4 mr-2" />
+                      Sign Out
+                    </DropdownMenuItem>
+                  </DropdownMenuContent>
+                </DropdownMenu>
               </>
             ) : (
               <Dialog open={showAuth} onOpenChange={setShowAuth}>
