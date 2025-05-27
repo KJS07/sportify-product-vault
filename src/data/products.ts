@@ -1,4 +1,3 @@
-
 export interface Product {
   id: number;
   name: string;
@@ -9,6 +8,7 @@ export interface Product {
   rating: number;
   inStock: boolean;
   quantity: number;
+  description: string;
 }
 
 export const products: Product[] = [
@@ -22,7 +22,8 @@ export const products: Product[] = [
     category: "Cricket",
     rating: 4.8,
     inStock: true,
-    quantity: 3
+    quantity: 3,
+    description: "Professional grade cricket bat made from premium English willow. Features a balanced weight distribution for powerful shots and excellent control. Hand-selected wood ensures durability and superior performance on the field."
   },
   {
     id: 2,
@@ -32,7 +33,8 @@ export const products: Product[] = [
     category: "Cricket",
     rating: 4.6,
     inStock: true,
-    quantity: 27
+    quantity: 27,
+    description: "Premium leather cricket ball with traditional four-piece construction. Hand-stitched seams provide excellent grip for bowlers. Maintains shape and bounce throughout extended play sessions."
   },
   {
     id: 3,
@@ -42,7 +44,8 @@ export const products: Product[] = [
     category: "Cricket",
     rating: 4.5,
     inStock: true,
-    quantity: 8
+    quantity: 8,
+    description: "Lightweight yet protective batting pads with high-density foam padding. Adjustable straps ensure a secure fit. Designed for maximum mobility while providing comprehensive leg protection."
   },
   {
     id: 4,
@@ -52,7 +55,8 @@ export const products: Product[] = [
     category: "Cricket",
     rating: 4.7,
     inStock: true,
-    quantity: 15
+    quantity: 15,
+    description: "Professional batting gloves with premium leather palm for superior grip. High-impact protection on fingers and back of hand. Moisture-wicking inner lining keeps hands dry during long innings."
   },
   {
     id: 5,
@@ -63,7 +67,8 @@ export const products: Product[] = [
     category: "Cricket",
     rating: 4.8,
     inStock: true,
-    quantity: 4
+    quantity: 4,
+    description: "Advanced cricket helmet with titanium grille for maximum protection. Lightweight design with superior ventilation. Meets international safety standards with adjustable fit system for comfort during long matches."
   },
   {
     id: 6,
@@ -73,7 +78,8 @@ export const products: Product[] = [
     category: "Cricket",
     rating: 4.6,
     inStock: true,
-    quantity: 12
+    quantity: 12,
+    description: "Specialized wicketkeeping gloves with reinforced palm and fingers. Enhanced grip surface for secure catches. Flexible design allows natural hand movement while maintaining protection."
   },
   {
     id: 7,
@@ -83,7 +89,8 @@ export const products: Product[] = [
     category: "Cricket",
     rating: 4.4,
     inStock: true,
-    quantity: 6
+    quantity: 6,
+    description: "Official size stumps and bails set made from seasoned hardwood. Precision-crafted for perfect balance and easy assembly. Includes carrying case for convenient transportation to matches."
   },
   {
     id: 8,
@@ -93,7 +100,8 @@ export const products: Product[] = [
     category: "Cricket",
     rating: 4.3,
     inStock: true,
-    quantity: 22
+    quantity: 22,
+    description: "Essential protective gear for batsmen with lightweight yet durable construction. Ergonomic design ensures comfort during extended play. High-impact resistant material provides reliable protection."
   },
 
   // Football (Soccer) Equipment
@@ -105,7 +113,8 @@ export const products: Product[] = [
     category: "Soccer",
     rating: 4.8,
     inStock: true,
-    quantity: 14
+    quantity: 14,
+    description: "FIFA approved soccer ball with superior flight characteristics. Made with high-quality synthetic leather for consistent performance. Perfect weight and balance for professional level play."
   },
   {
     id: 10,
@@ -116,7 +125,8 @@ export const products: Product[] = [
     category: "Soccer",
     rating: 4.7,
     inStock: true,
-    quantity: 2
+    quantity: 2,
+    description: "Professional football boots with advanced stud configuration for optimal traction. Lightweight synthetic upper with enhanced ball touch. Designed for agility and speed on natural grass surfaces."
   },
   {
     id: 11,
@@ -126,7 +136,8 @@ export const products: Product[] = [
     category: "Soccer",
     rating: 4.5,
     inStock: true,
-    quantity: 19
+    quantity: 19,
+    description: "Lightweight shin guards with hard shell protection and comfortable foam backing. Adjustable straps ensure secure fit during intense gameplay. Meets FIFA safety standards for competitive play."
   },
   {
     id: 12,
@@ -136,7 +147,8 @@ export const products: Product[] = [
     category: "Soccer",
     rating: 4.6,
     inStock: true,
-    quantity: 7
+    quantity: 7,
+    description: "Professional goalkeeper gloves with superior grip palm technology. Extended cuff provides wrist protection. Breathable mesh backhand keeps hands cool during matches."
   },
   {
     id: 13,
@@ -147,7 +159,8 @@ export const products: Product[] = [
     category: "Soccer",
     rating: 4.7,
     inStock: true,
-    quantity: 1
+    quantity: 1,
+    description: "Regulation size goalposts with durable steel construction. Weather-resistant powder coating ensures longevity. Includes high-quality net and all necessary hardware for assembly."
   },
   {
     id: 14,
@@ -157,7 +170,8 @@ export const products: Product[] = [
     category: "Soccer",
     rating: 4.4,
     inStock: true,
-    quantity: 31
+    quantity: 31,
+    description: "Bright colored training cones for agility and skill development. Durable plastic construction withstands outdoor conditions. Essential for coaching drills and field marking."
   },
   {
     id: 15,
@@ -167,7 +181,8 @@ export const products: Product[] = [
     category: "Soccer",
     rating: 4.3,
     inStock: true,
-    quantity: 18
+    quantity: 18,
+    description: "Professional corner flags with flexible poles to prevent injury. Bright colors for maximum visibility. Spring-loaded base returns flag to upright position after contact."
   },
   {
     id: 16,
@@ -178,7 +193,8 @@ export const products: Product[] = [
     category: "Soccer",
     rating: 4.6,
     inStock: true,
-    quantity: 16
+    quantity: 16,
+    description: "Professional team kit with moisture-wicking fabric technology. Lightweight and breathable design for optimal performance. Available in multiple sizes with customization options."
   },
 
   // Hockey Equipment
@@ -190,7 +206,8 @@ export const products: Product[] = [
     category: "Hockey",
     rating: 4.7,
     inStock: true,
-    quantity: 5
+    quantity: 5,
+    description: "High-performance field hockey stick with carbon fiber construction. Perfectly balanced for power and control. Advanced grip technology ensures secure handling in all weather conditions."
   },
   {
     id: 18,
@@ -200,7 +217,8 @@ export const products: Product[] = [
     category: "Hockey",
     rating: 4.5,
     inStock: true,
-    quantity: 34
+    quantity: 34,
+    description: "Regulation hockey ball with consistent bounce and durability. Dimpled surface provides optimal aerodynamics and control. Suitable for both training and competitive matches."
   },
   {
     id: 19,
@@ -210,7 +228,8 @@ export const products: Product[] = [
     category: "Hockey",
     rating: 4.6,
     inStock: true,
-    quantity: 11
+    quantity: 11,
+    description: "Lightweight shin pads with high-impact protection. Anatomical design follows leg contours for natural movement. Moisture-wicking inner padding keeps legs dry during intense gameplay."
   },
   {
     id: 20,
@@ -220,7 +239,8 @@ export const products: Product[] = [
     category: "Hockey",
     rating: 4.4,
     inStock: true,
-    quantity: 43
+    quantity: 43,
+    description: "Custom-fit mouth guard for dental protection during hockey. Made from medical-grade materials for safety and comfort. Easy to mold for personalized fit and maximum protection."
   },
   {
     id: 21,
@@ -231,7 +251,8 @@ export const products: Product[] = [
     category: "Hockey",
     rating: 4.8,
     inStock: true,
-    quantity: 1
+    quantity: 1,
+    description: "Complete goalkeeper protection set including helmet, chest guard, leg guards, and kickers. Professional-grade equipment meeting international safety standards. Lightweight design for enhanced mobility."
   },
   {
     id: 22,
@@ -241,7 +262,8 @@ export const products: Product[] = [
     category: "Hockey",
     rating: 4.5,
     inStock: true,
-    quantity: 9
+    quantity: 9,
+    description: "Specialized hockey shoes with non-marking rubber sole. Enhanced grip pattern for artificial turf surfaces. Breathable upper material with reinforced toe area for durability."
   },
   {
     id: 23,
@@ -251,7 +273,8 @@ export const products: Product[] = [
     category: "Hockey",
     rating: 4.3,
     inStock: true,
-    quantity: 26
+    quantity: 26,
+    description: "Essential protective gear for male hockey players. Lightweight and comfortable design with high-impact resistance. Ergonomic shape ensures natural movement during play."
   },
   {
     id: 24,
@@ -261,7 +284,8 @@ export const products: Product[] = [
     category: "Hockey",
     rating: 4.2,
     inStock: true,
-    quantity: 23
+    quantity: 23,
+    description: "High-visibility training bibs for team identification during practice sessions. Breathable mesh fabric for comfort. Available in multiple colors for different team groupings."
   },
 
   // Tennis Equipment
@@ -274,7 +298,8 @@ export const products: Product[] = [
     category: "Tennis",
     rating: 4.8,
     inStock: true,
-    quantity: 3
+    quantity: 3,
+    description: "Tournament-grade tennis racket with advanced carbon fiber frame. Optimized for power and precision with excellent vibration dampening. Preferred by professional players worldwide."
   },
   {
     id: 26,
@@ -284,7 +309,8 @@ export const products: Product[] = [
     category: "Tennis",
     rating: 4.6,
     inStock: true,
-    quantity: 37
+    quantity: 37,
+    description: "ITF approved tennis balls with consistent bounce and durability. Premium felt covering for optimal performance. Perfect for competitive matches and training sessions."
   },
   {
     id: 27,
@@ -294,7 +320,8 @@ export const products: Product[] = [
     category: "Tennis",
     rating: 4.7,
     inStock: true,
-    quantity: 6
+    quantity: 6,
+    description: "Professional tennis shoes with superior court grip and lateral support. Non-marking rubber sole protects court surfaces. Breathable upper with reinforced high-wear areas."
   },
   {
     id: 28,
@@ -304,7 +331,8 @@ export const products: Product[] = [
     category: "Tennis",
     rating: 4.4,
     inStock: true,
-    quantity: 29
+    quantity: 29,
+    description: "Moisture-absorbing sweatbands for head and wrists. Soft cotton blend material for comfort during intense matches. Elastic design ensures secure fit without restriction."
   },
   {
     id: 29,
@@ -314,7 +342,8 @@ export const products: Product[] = [
     category: "Tennis",
     rating: 4.5,
     inStock: true,
-    quantity: 4
+    quantity: 4,
+    description: "Regulation tennis net with braided polyethylene construction. Weather-resistant with reinforced binding tape. Easy installation with adjustable tension system."
   },
   {
     id: 30,
@@ -324,7 +353,8 @@ export const products: Product[] = [
     category: "Tennis",
     rating: 4.3,
     inStock: true,
-    quantity: 13
+    quantity: 13,
+    description: "Convenient ball collection basket for training sessions. Holds up to 72 tennis balls with easy pickup design. Durable wire construction with comfortable carrying handles."
   },
   {
     id: 31,
@@ -334,7 +364,8 @@ export const products: Product[] = [
     category: "Tennis",
     rating: 4.2,
     inStock: true,
-    quantity: 41
+    quantity: 41,
+    description: "Premium overgrips for enhanced racket handling. Tacky surface provides superior grip in all conditions. Easy to apply and replace for consistent performance."
   },
   {
     id: 32,
@@ -344,7 +375,8 @@ export const products: Product[] = [
     category: "Tennis",
     rating: 4.4,
     inStock: true,
-    quantity: 20
+    quantity: 20,
+    description: "High-performance tennis strings for optimal power and control. Multifilament construction provides excellent feel and tension maintenance. Available in various gauges."
   },
 
   // Table Tennis Equipment
@@ -357,7 +389,8 @@ export const products: Product[] = [
     category: "Table Tennis",
     rating: 4.8,
     inStock: true,
-    quantity: 1
+    quantity: 1,
+    description: "Tournament-grade table tennis table with regulation dimensions. High-density fiberboard surface for consistent ball bounce. Sturdy steel frame with adjustable leg levelers."
   },
   {
     id: 34,
@@ -367,7 +400,8 @@ export const products: Product[] = [
     category: "Table Tennis",
     rating: 4.6,
     inStock: true,
-    quantity: 15
+    quantity: 15,
+    description: "Professional table tennis racket with high-quality rubber surfaces. Balanced blade for excellent control and spin generation. ITTF approved for competitive play."
   },
   {
     id: 35,
@@ -377,7 +411,8 @@ export const products: Product[] = [
     category: "Table Tennis",
     rating: 4.5,
     inStock: true,
-    quantity: 47
+    quantity: 47,
+    description: "ITTF approved table tennis balls with consistent bounce characteristics. Made from high-quality celluloid for durability. Perfect roundness ensures predictable ball trajectory."
   },
   {
     id: 36,
@@ -387,7 +422,8 @@ export const products: Product[] = [
     category: "Table Tennis",
     rating: 4.4,
     inStock: true,
-    quantity: 12
+    quantity: 12,
+    description: "Regulation net and post set with easy clamp attachment. Adjustable tension for proper net height. Durable construction suitable for both indoor and outdoor tables."
   },
   {
     id: 37,
@@ -397,7 +433,8 @@ export const products: Product[] = [
     category: "Table Tennis",
     rating: 4.3,
     inStock: true,
-    quantity: 8
+    quantity: 8,
+    description: "Waterproof table cover for outdoor table protection. UV-resistant material prevents sun damage. Elastic edges ensure secure fit in windy conditions."
   },
   {
     id: 38,
@@ -407,7 +444,8 @@ export const products: Product[] = [
     category: "Table Tennis",
     rating: 4.2,
     inStock: true,
-    quantity: 7
+    quantity: 7,
+    description: "Professional scoreboard for tracking match progress. Large, clear numbers visible from player positions. Durable construction with smooth number rotation mechanism."
   },
   {
     id: 39,
@@ -417,7 +455,8 @@ export const products: Product[] = [
     category: "Table Tennis",
     rating: 4.1,
     inStock: true,
-    quantity: 49
+    quantity: 49,
+    description: "Protective edge tape for table tennis tables. Prevents damage from aggressive play and extends table life. Easy application with strong adhesive backing."
   },
   {
     id: 40,
@@ -427,7 +466,8 @@ export const products: Product[] = [
     category: "Table Tennis",
     rating: 4.3,
     inStock: true,
-    quantity: 28
+    quantity: 28,
+    description: "Protective case for table tennis rackets with foam padding. Holds up to two rackets with additional space for balls. Water-resistant zipper protects equipment."
   },
 
   // Basketball Equipment
@@ -439,7 +479,8 @@ export const products: Product[] = [
     category: "Basketball",
     rating: 4.7,
     inStock: true,
-    quantity: 17
+    quantity: 17,
+    description: "Regulation size basketball with premium composite leather construction. Excellent grip and consistent bounce for indoor and outdoor play. Official size and weight specifications."
   },
   {
     id: 42,
@@ -450,7 +491,8 @@ export const products: Product[] = [
     category: "Basketball",
     rating: 4.8,
     inStock: true,
-    quantity: 2
+    quantity: 2,
+    description: "Professional basketball hoop with regulation 18-inch rim diameter. Heavy-duty steel construction with weather-resistant coating. Includes all-weather net and mounting hardware."
   },
   {
     id: 43,
@@ -460,7 +502,8 @@ export const products: Product[] = [
     category: "Basketball",
     rating: 4.6,
     inStock: true,
-    quantity: 3
+    quantity: 3,
+    description: "Regulation basketball backboard with tempered glass surface. Professional rebound characteristics and durability. Regulation 6-foot width with target square markings."
   },
   {
     id: 44,
@@ -471,7 +514,8 @@ export const products: Product[] = [
     category: "Basketball",
     rating: 4.8,
     inStock: true,
-    quantity: 4
+    quantity: 4,
+    description: "High-performance basketball shoes with superior ankle support and cushioning. Advanced traction pattern for quick cuts and stops. Breathable upper with reinforced high-wear areas."
   },
   {
     id: 45,
@@ -481,7 +525,8 @@ export const products: Product[] = [
     category: "Basketball",
     rating: 4.5,
     inStock: true,
-    quantity: 21
+    quantity: 21,
+    description: "Professional basketball uniform with moisture-wicking fabric technology. Lightweight and breathable design for optimal performance. Available in team colors with customization options."
   },
   {
     id: 46,
@@ -491,7 +536,8 @@ export const products: Product[] = [
     category: "Basketball",
     rating: 4.4,
     inStock: true,
-    quantity: 33
+    quantity: 33,
+    description: "Protective padding for knees and elbows during basketball play. High-impact foam with compression sleeve design. Stays in place during intense gameplay while allowing natural movement."
   },
   {
     id: 47,
@@ -501,7 +547,8 @@ export const products: Product[] = [
     category: "Basketball",
     rating: 4.6,
     inStock: true,
-    quantity: 24
+    quantity: 24,
+    description: "Supportive ankle braces for injury prevention and recovery. Adjustable straps provide customized compression and support. Lightweight design fits comfortably inside basketball shoes."
   },
   {
     id: 48,
@@ -511,6 +558,7 @@ export const products: Product[] = [
     category: "Basketball",
     rating: 4.3,
     inStock: true,
-    quantity: 45
+    quantity: 45,
+    description: "Professional referee whistle with clear, loud tone for game officiating. Pealess design prevents freezing in cold weather. Includes lanyard for secure attachment during games."
   }
 ];

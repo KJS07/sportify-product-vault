@@ -8,9 +8,10 @@ import type { Product } from "@/data/products";
 
 interface ProductCardProps {
   product: Product;
+  onProductClick: (product: Product) => void;
 }
 
-const ProductCard = ({ product }: ProductCardProps) => {
+const ProductCard = ({ product, onProductClick }: ProductCardProps) => {
   const { user } = useAuth();
   const { addToCart } = useCart(user?.id);
   
@@ -22,12 +23,20 @@ const ProductCard = ({ product }: ProductCardProps) => {
     return `₹${price.toLocaleString('en-IN')}`;
   };
 
-  const handleAddToCart = () => {
+  const handleAddToCart = (e: React.MouseEvent) => {
+    e.stopPropagation(); // Prevent card click when clicking add to cart
     addToCart(product.id, 1);
   };
 
+  const handleCardClick = () => {
+    onProductClick(product);
+  };
+
   return (
-    <Card className="group cursor-pointer transition-all duration-300 hover:shadow-xl hover:-translate-y-2 border-0 shadow-md">
+    <Card 
+      className="group cursor-pointer transition-all duration-300 hover:shadow-xl hover:-translate-y-2 border-0 shadow-md"
+      onClick={handleCardClick}
+    >
       <div className="relative overflow-hidden rounded-t-lg">
         <img
           src={product.image}
@@ -43,6 +52,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
           size="sm"
           variant="ghost"
           className="absolute top-4 right-4 bg-white/80 hover:bg-white text-gray-600 hover:text-red-500"
+          onClick={(e) => e.stopPropagation()}
         >
           <Heart className="h-4 w-4" />
         </Button>
